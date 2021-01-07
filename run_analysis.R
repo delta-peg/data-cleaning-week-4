@@ -47,6 +47,8 @@ summary = complete_dataset %>%
   group_by(subject, activity) %>% 
   summarise_all(mean)
 
+# save this dataset as textfile, as required by the assigment
 summary %>% write.table("tidy_summary.txt", row.names = FALSE)
 
-
+# as a last step, as required by the assignemnt, output this dataset
+summary
