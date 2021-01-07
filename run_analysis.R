@@ -39,9 +39,6 @@ desired_columns = c(1, 2, desired_measurements)
 # throw away all other columns
 complete_dataset = complete_dataset[,desired_columns]
 
-# dump out to csv
-complete_dataset %>% write.csv("complete_dataset.csv")
-
 # produce the summary aggregate, which shows the average of each variable by activity and subject. 
 summary = complete_dataset %>% 
   group_by(subject, activity) %>% 
